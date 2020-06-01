@@ -1,12 +1,12 @@
 function cs142MakeMultiFilter(originalArray) {
-  var currrentArray = originalArray;
+  var currentArray = originalArray;
   function arrayFilterer(filterCriteria, callback) {
     if (typeof filterCriteria !== "function") {
-      return currrentArray;
+      return currentArray;
     }
-    currrentArray = currrentArray.filter(filterCriteria);
+    currentArray = currentArray.filter(filterCriteria);
     if (typeof callback === "function") {
-      callback.call(originalArray, currrentArray);
+      callback.call(originalArray, currentArray);
     }
     return arrayFilterer;
   }
